@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Baloo+2:wght@400..800&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Diphylleia&family=El+Messiri:wght@400..700&family=Fleur+De+Leah&family=Just+Another+Hand&family=Lexend+Deca:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Splash&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    user-select: none;
+}
+
+.body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(game_data/Background_Pic.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.title {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Fleur De Leah", cursive;
+    font-size: 40px;
+    font-weight: 500;
+    text-shadow: 1.5px 1.5px 1px rgba(0, 0, 0, 0.474);
+    -webkit-text-fill-color: transparent;
+
+    background-size: 200% auto;
+    background-clip: text;
+    background-image: linear-gradient(109.5deg,
+            rgba(37, 118, 116, 1) 10.5%,
+            rgba(39, 220, 96, 1) 68.5%,
+            rgba(37, 118, 116, 1) 100%);
+
+    animation: title_animation 4s linear infinite;
+}
+
+
+@keyframes title_animation {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.container {
+    height: 340px;
+    width: 340px;
+    background-color: blanchedalmond;
+    border: solid 10px rgb(248, 248, 167);
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px;
+   
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    color: blanchedalmond;
+    font-weight: 500;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 12px;
+    gap: 10px;
+
+    box-shadow: inset 2px 2px 4px 0.01px rgb(188, 187, 187),
+        inset -2px -2px 3px rgb(255, 255, 255),
+        2px 2px 4px rgb(135, 133, 133),
+        -2px -2px 5px rgb(223, 223, 223);
+}
+
+.box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8,.box9{
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blanchedalmond;
+    box-shadow: -2px -2px 4px rgb(255, 255, 255),
+        2px 2px 4px rgb(174, 162, 145);
+}
+
+.box1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.box2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.box3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.box4 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.box5 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.box6 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+.box7 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+.box8 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+.box9 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+
+.ostyle {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: rgb(5, 139, 5);
+    text-shadow: 1px 1px 3px rgb(89, 87, 87),
+        -2px -2px 5px white;
+
+    box-shadow: inset -1px -1px 2px rgb(255, 255, 255),
+        inset 1px 1px 2px rgb(174, 162, 145);
+}
+
+.xstyle {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: rgb(253, 13, 13);
+    text-shadow: 1px 1px 3px rgb(89, 87, 87),
+        -2px -2px 5px white;
+
+    box-shadow: inset -1px -1px 2px rgb(255, 255, 255),
+        inset 1px 1px 2px rgb(174, 162, 145);
+}
+
+.lightbox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lightbox div {
+    display: flex;
+    align-self: center;
+    gap: 40px;
+}
+
+.new_game {
+    padding: 5px 7px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.755);
+
+    background-image: linear-gradient(to right, #ff7f0895 0%, #FFC837 51%, #ff7f08c4 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+}
+
+.new_game:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    transform: scale(0.96);
+    transition: transform 0.3s ease;
+}
+
+.name {
+    width: 100%;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Caveat", cursive;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 1.5px 1.5px 1px rgba(0, 0, 0, 0.474);
+}
+
+.greenoff {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-image: url(game_data/greenOff.png);
+    background-size: cover;
+    box-shadow: 2px 2px 3px rgb(91, 75, 75);
+}
+
+.greenon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-image: url(game_data/greenOn.png);
+    background-size: cover;
+    box-shadow: 0px 0px 23px 3px rgb(86, 213, 84),
+        2px 2px 3px black
+}
+
+.redoff {
+    height: 48px;
+    width: 48px;
+    border-radius: 50px;
+    background-image: url(game_data/RedOff.png);
+    background-size: cover;
+    border: 1px solid;
+    box-shadow: 2px 2px 3px rgb(91, 75, 75);
+}
+
+.redon {
+    height: 48px;
+    width: 48px;
+    border-radius: 50px;
+    background-image: url(game_data/RedOn.png);
+    background-size: cover;
+    box-shadow: 0px 0px 23px 3px rgb(211, 39, 39),
+        2px 2px 3px black;
+}
+
+.display_box {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display_box_result {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: game_over_in 2s ease-out forwards;
+}
+
+.inputbox {
+    width: 260px;
+    padding: 10px 30px;
+    border-radius: 12px;
+    background-color: rgb(205, 226, 255);
+    border: 2px solid rgb(169, 169, 169);
+    background-image: radial-gradient(circle 311px at 8.6% 27.9%, rgba(62, 147, 252, 0.57) 12.9%, rgba(239, 183, 192, 0.44) 91.2%);
+}
+
+.inputbox-head {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(50, 50, 50);
+}
+
+.inputbox p {
+    margin-bottom: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: rgb(50, 50, 50);
+}
+
+.inputbox input {
+    width: 95%;
+    height: 20px;
+    padding: 5px;
+    border-radius: 4px;
+    outline: none;
+    margin: auto;
+    margin-bottom: 25px;
+    outline: 1px solid rgb(0, 140, 255);
+    background-color: azure;
+}
+
+.inputbox input:focus {
+    outline: 1px solid rgb(0, 230, 230);
+}
+
+.inputbox-btn {
+    height: 26px;
+    width: 70%;
+    border-radius: 30px;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.525);
+
+    background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+}
+
+.inputbox-btn:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    transform: scale(0.97);
+    transition: transform 0.3s ease;
+}
+
+
+.game_over {
+    height: 200px;
+    min-width: 370px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    border-radius: 20px;
+    border: 2px solid rgb(169, 169, 169);
+
+    background-image: radial-gradient(circle 311px at 8.6% 27.9%, rgba(62, 147, 252, 0.57) 12.9%, rgba(239, 183, 192, 0.44) 91.2%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    animation: game_over_in 2s ease-out forwards;
+}
+
+@keyframes game_over_in {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.game_over p {
+    font-size: 35px;
+    margin-bottom: 8px;
+    font-family: "Diphylleia", serif;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-shadow: 1.5px 1.5px 1px rgba(0, 0, 0, 0.474);
+}
+
+.game_over span {
+    font-size: 45px;
+    text-shadow: 1.5px 1.5px 1px rgba(0, 0, 0, 0.474);
+}
+
+.game_over div {
+    margin-top: 20px;
+}
+
+
+
+
+
+
+/* MObile Responsive */
+@media (orientation: portrait) {
+
+    .container {
+        width: 80%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        padding: 11px;
+        gap: 9px;
+        font-family: "Lexend Deca", sans-serif;
+        font-size: 50px;
+        font-weight: 500;
+        border: solid 9px rgb(248, 248, 167);
+    }
+
+    .inputbox {
+        width: 75%;
+    }
+    .new_game {
+        font-size: 14px;
+    }
+    .game_over {
+        height: 180px;
+        min-width: 80%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1.5px solid rgb(169, 169, 169);
+    }
+    .game_over p {
+        font-size: 23px;
+        margin-bottom: 8px;
+    }
+    .game_over span {
+        font-size: 40px;
+    }
+    .game_over div {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    .xstyle, .ostyle {
+        font-family: "Lexend Deca", sans-serif;
+        font-size: 50px;
+        font-weight: 380;        
+    }
+
+}
